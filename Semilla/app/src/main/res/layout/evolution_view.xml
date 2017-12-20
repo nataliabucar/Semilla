@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="67dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_seed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/how_evolution"
+        android:textColor="@color/outer_space"
+        android:textSize="21sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/how_evolution_description"
+            android:textColor="@color/outer_space"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:layout_width="36dp"
+            android:layout_height="18dp" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/manatee" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_day_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="33dp"
+                android:background="@drawable/punto_inicio" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="108dp"
+                android:layout_marginLeft="7dp"
+                android:background="@color/verdigris" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_day_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/day_0"
+            android:textColor="@color/verdigris"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_item_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/evolucion" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_day_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="33dp"
+                android:background="@drawable/punto_centro" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="108dp"
+                android:layout_marginLeft="7dp"
+                android:background="@color/verdigris" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_day_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/day_1"
+            android:textColor="@color/verdigris"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_item_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/evolucion_02" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_day_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="33dp"
+                android:background="@drawable/punto_centro" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="108dp"
+                android:layout_marginLeft="7dp"
+                android:background="@color/verdigris" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_day_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/day_2"
+            android:textColor="@color/verdigris"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_item_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/evolucion_3" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_day_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="33dp"
+                android:background="@drawable/punto_centro" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="108dp"
+                android:layout_marginLeft="7dp"
+                android:background="@color/verdigris" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_day_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/day_3"
+            android:textColor="@color/verdigris"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_item_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/evolucion_04" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_day_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="33dp"
+                android:background="@drawable/punto_centro" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="108dp"
+                android:layout_marginLeft="7dp"
+                android:background="@color/verdigris" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_day_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/day_4"
+            android:textColor="@color/verdigris"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_item_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/evolucion_05" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="108dp"
+                android:layout_marginLeft="7dp"
+                android:background="@color/verdigris" />
+
+
+            <ImageView
+                android:id="@+id/iv_day_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="33dp"
+                android:background="@drawable/punto_final" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_day_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/day_5"
+            android:textColor="@color/verdigris"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_item_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/evolucion_06" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

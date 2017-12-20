@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "102736326580",
+    "firebase_url": "https://semilla-f1131.firebaseio.com",
+    "project_id": "semilla-f1131",
+    "storage_bucket": "semilla-f1131.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102736326580:android:d3ba2a647664d182",
+        "android_client_info": {
+          "package_name": "com.semilla.globallogic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102736326580-3pm9sbqulb94t8c129arouugdbod01gi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlCNd9-cGIOrffo51L-k-BngbzI1TPdZM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

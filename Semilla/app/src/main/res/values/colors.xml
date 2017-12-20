@@ -3,4 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="outer_space">#ff415358</color>
+    <color name="verdigris">#ff59bbad</color>
+    <color name="light_gray">#ffd4d4cf</color>
+    <color name="timerwolf">#ffdadad5</color>
+    <color name="manatee">#ff979797</color>
+    <color name="black">#ff000000</color>
+    <color name="taupe_gray">#ff91928e</color>
 </resources>

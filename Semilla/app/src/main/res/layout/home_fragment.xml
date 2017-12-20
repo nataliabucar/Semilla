@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="21sp"
+        android:textColor="@color/outer_space"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/welcome"/>
+
+    <TextView
+        android:id="@+id/tv_message_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/outer_space"
+        android:fontFamily="sans-serif"
+        android:text="@string/message_welcome"/>
+
+    <TextView
+        android:id="@+id/tv_mts_width"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_message_welcome"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="10sp"
+        android:textColor="@color/outer_space"
+        android:fontFamily="sans-serif"
+        android:text="@string/mts"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/tv_mts_width"
+        android:id="@+id/ll_container_orchard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_mts_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_container_orchard"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="10sp"
+        android:textColor="@color/outer_space"
+        android:fontFamily="sans-serif"
+        android:text="@string/mts"/>
+
+
+    <TextView
+        android:id="@+id/tv_edit_ochard"
+        android:layout_width="156dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/tv_mts_height"
+        android:text="@string/edit"
+        android:gravity="center"
+        android:layout_marginTop="17dp"
+        android:textSize="14sp"
+        android:background="@drawable/shape_edit_ochard"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-medium"/>
+
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="65dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_seed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/seed_lowercase"
+        android:textColor="@color/outer_space"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="24dp"
+        android:textSize="21sp" />
+
+    <TextView
+        android:id="@+id/tv_seed_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:layout_marginRight="35dp"
+        android:text="@string/seed_description"
+        android:textColor="@color/outer_space"
+        android:layout_marginBottom="32dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_seed_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/seed_message"
+        android:textColor="@color/black"
+        android:layout_marginBottom="23dp"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/tv_seed_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/seed_1"
+        android:textColor="@color/outer_space"
+        android:textSize="14sp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/manatee"/>
+
+    <TextView
+        android:id="@+id/tv_seed_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/seed_2"
+        android:textColor="@color/outer_space"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/manatee"/>
+
+    <TextView
+        android:id="@+id/tv_seed_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/seed_3"
+        android:textColor="@color/outer_space"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/manatee"/>
+
+    <TextView
+        android:id="@+id/tv_seed_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/seed_4"
+        android:textColor="@color/outer_space"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/manatee"/>
+
+</LinearLayout>
