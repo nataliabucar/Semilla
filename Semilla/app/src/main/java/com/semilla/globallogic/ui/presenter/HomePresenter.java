@@ -85,7 +85,7 @@ public class HomePresenter {
 
 
                 for (DataSnapshot item : dataSnapshot.getChildren()) {
-                    vegetables.add(item.getValue(Vegetable.class));
+                    //vegetables.add(item.getValue(Vegetable.class));
                 }
 
             }
