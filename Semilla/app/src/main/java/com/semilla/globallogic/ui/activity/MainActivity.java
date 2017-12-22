@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import com.semilla.globallogic.R;
 import com.semilla.globallogic.ui.fragment.ChartFragment;
 import com.semilla.globallogic.ui.fragment.HomeFragment;
+import com.semilla.globallogic.ui.fragment.SocialFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -61,13 +62,20 @@ public class MainActivity extends AppCompatActivity {
         vDataTab.setSelected(false);
     }
 
-    @OnClick(R.id.ll_chart)
-    public void onClickChart(){
-        replaceFragment(R.id.main_fragment_container, ChartFragment.newInstance());
+    @OnClick(R.id.ll_social)
+    public void onClickSocial(){
+        replaceFragment(R.id.main_fragment_container, SocialFragment.newInstance());
         vOchardTab.setSelected(false);
         vCommunityTab.setSelected(true);
         vDataTab.setSelected(false);
     }
 
+    @OnClick(R.id.ll_chart)
+    public void onClickChart(){
+        replaceFragment(R.id.main_fragment_container, ChartFragment.newInstance());
+        vOchardTab.setSelected(false);
+        vCommunityTab.setSelected(false);
+        vDataTab.setSelected(true);
+    }
 
 }

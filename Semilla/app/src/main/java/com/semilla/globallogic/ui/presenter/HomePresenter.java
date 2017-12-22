@@ -78,14 +78,14 @@ public class HomePresenter {
             list =new MutableLiveData<>();
         }
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Vegetales");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("vegetales");
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
 
                 for (DataSnapshot item : dataSnapshot.getChildren()) {
-                    vegetables.add(item.getValue(Vegetable.class));
+                    //vegetables.add(item.getValue(Vegetable.class));
                 }
 
             }
