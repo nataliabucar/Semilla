@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:102736326580:android:d3ba2a647664d182",
+        "mobilesdk_app_id": "1:102736326580:android:46a3aa8abb749b20",
         "android_client_info": {
-          "package_name": "com.semilla.globallogic"
+          "package_name": "com.semilla.globallogic.ui"
         }
       },
       "oauth_client": [

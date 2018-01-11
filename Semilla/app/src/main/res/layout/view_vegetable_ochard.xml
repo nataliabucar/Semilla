@@ -2,12 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="60dp"
     android:id="@+id/ll_vegetable_container"
-    android:layout_margin="5dp"
+    android:background="@drawable/grid1"
     android:layout_height="60dp">
+
+
+    <ImageView
+        android:id="@+id/iv_sing"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/aviso_siembra"/>
+
+
 
     <ImageView
         android:id="@+id/im_vegetable_image"
-        android:layout_width="24dp"
-        android:layout_height="25dp" />
+        android:layout_gravity="center"
+        android:background="@drawable/papa"
+        android:layout_width="28dp"
+        android:layout_height="26dp" />
 
 </LinearLayout>

@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 import com.semilla.globallogic.R;
+import com.semilla.globallogic.ui.presenter.VegetableDetailPresenter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,6 +32,10 @@ public class VegetableDetailActivity extends AppCompatActivity {
     LinearLayout vEvolutionView;
     @BindView(R.id.scroll_view)
     ScrollView vScrollView;
+    @BindView(R.id.cb_is_sow)
+    CheckBox vCheckSow;
+
+    VegetableDetailPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +44,9 @@ public class VegetableDetailActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+        presenter = new VegetableDetailPresenter();
+        vCheckSow.setChecked(presenter.isSow(this));
+
 
     }
 
@@ -70,6 +79,11 @@ public class VegetableDetailActivity extends AppCompatActivity {
         vSeedSelected.setVisibility(View.GONE);
         vSowSelected.setVisibility(View.GONE);
         vEvolutionSelected.setVisibility(View.VISIBLE);
+    }
+
+    @OnClick(R.id.cb_is_sow)
+    public void onClickCheckBox(){
+        presenter.saveSow(this, vCheckSow.isChecked());
     }
 
 }

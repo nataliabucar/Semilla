@@ -3,6 +3,7 @@ package com.semilla.globallogic.ui.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -15,11 +16,15 @@ import com.semilla.globallogic.ui.activity.WizardActivity;
 import com.semilla.globallogic.ui.adapter.OchardAdapter;
 import com.semilla.globallogic.ui.presenter.HomePresenter;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.OnClick;
 
 
-public class HomeFragment extends BaseFragment implements OchardAdapter.OchardAdapterInterface {
+public class HomeFragment extends BaseFragment implements OchardAdapter.OchardAdapterInterface, HomeView {
 
     @BindView(R.id.ll_container_orchard)
     RecyclerView vOrchardRecycler;
@@ -29,6 +34,8 @@ public class HomeFragment extends BaseFragment implements OchardAdapter.OchardAd
     TextView vMtsHeight;
     @BindView(R.id.tv_title)
     TextView vTtitle;
+    @BindView(R.id.tv_title_calendar_month)
+    TextView vMonth;
 
     private HomePresenter homePresenter;
 
@@ -50,6 +57,7 @@ public class HomeFragment extends BaseFragment implements OchardAdapter.OchardAd
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         homePresenter = new HomePresenter();
+        homePresenter.setHomeView(this);
         init();
         homePresenter.initialize(getContext());
 
@@ -65,6 +73,7 @@ public class HomeFragment extends BaseFragment implements OchardAdapter.OchardAd
 
 
     private void init() {
+        vMonth.setText( new SimpleDateFormat("MMM").format(Calendar.getInstance().getTime()));
         vTtitle.setText(!homePresenter.isFirstTime(getContext())? getResources().getString(R.string.basic_ochard): getResources().getString(R.string.welcome));
         vMtsHeight.setText(String.format(getString(R.string.mts), homePresenter.getHeight(getContext())));
         vMtsWidht.setText(String.format(getString(R.string.mts), homePresenter.getWidth(getContext())));
@@ -97,5 +106,10 @@ public class HomeFragment extends BaseFragment implements OchardAdapter.OchardAd
         vMtsWidht.setText(String.format(getString(R.string.mts), homePresenter.getWidth(getContext())));
         ochardAdaper.setVegetables(homePresenter.getVegetables());
 
+    }
+
+    @Override
+    public void setVegetables() {
+        ochardAdaper.setVegetables(homePresenter.getVegetables());
     }
 }

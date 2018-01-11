@@ -14,9 +14,11 @@ public class GroundSizePresenter {
 
 
     public void saveWidthAndHeight(Context context,  Integer height, Integer width) {
-        SharedPreferences.Editor editor = context.getSharedPreferences(WIDTH, MODE_PRIVATE).edit();
-        editor.putInt(WIDTH, width);
-        editor.putInt(HEIGHT, height);
-        editor.apply();
+        if(height != null || width != null) {
+            SharedPreferences.Editor editor = context.getSharedPreferences(WIDTH, MODE_PRIVATE).edit();
+            editor.putInt(WIDTH, width);
+            editor.putInt(HEIGHT, height);
+            editor.apply();
+        }
     }
 }

@@ -1,11 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
 
-    <ImageView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/alimento_tab" />
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_food_container"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="13dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-light"
+                android:includeFontPadding="false"
+                android:text="@string/food"
+                android:textColor="@color/outer_space"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/v_seed_selected"
+                android:layout_width="170dp"
+                android:layout_height="3dp"
+                android:background="@color/verdigris"
+                android:gravity="bottom" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_production_container"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_sow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:includeFontPadding="false"
+                android:text="@string/production"
+                android:textColor="@color/outer_space"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/v_sow_selected"
+                android:layout_width="170dp"
+                android:layout_height="3dp"
+                android:background="@color/verdigris"
+                android:gravity="bottom"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/iv_image_food_fragment"
+                android:layout_width="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/alimento_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_image_production_fragment"
+                android:layout_width="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/produccion_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

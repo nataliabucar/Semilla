@@ -52,4 +52,7 @@
     <string name="day_5">240 Días</string>
     <string name="basic_ochard">Huerta básica</string>
     <string name="comparte">Comparte</string>
+    <string name="food">Alimento</string>
+    <string name="production">Producción</string>
+    <string name="calendar">Calendario</string>
 </resources>

@@ -11,8 +11,11 @@ public class Vegetable implements Serializable {
 
     private String name;
 
-    public Vegetable(String vegetable) {
+    private String id;
+
+    public Vegetable(String vegetable, String id) {
         this.name = vegetable;
+        this.id = id;
     }
 
     public String getName() {
@@ -21,6 +24,14 @@ public class Vegetable implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
 

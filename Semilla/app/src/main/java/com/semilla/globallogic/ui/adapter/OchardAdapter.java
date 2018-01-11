@@ -12,11 +12,14 @@ import android.widget.LinearLayout;
 
 import com.globallogic.model.Vegetable;
 import com.semilla.globallogic.R;
+import com.semilla.globallogic.ui.util.VegetableUtil;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static android.content.Context.MODE_PRIVATE;
 
 
 public class OchardAdapter extends RecyclerView.Adapter<OchardAdapter.ViewHolder> {
@@ -26,6 +29,7 @@ public class OchardAdapter extends RecyclerView.Adapter<OchardAdapter.ViewHolder
     private List<Vegetable> data;
     private Context context;
     private OchardAdapterInterface ochardAdapterInterface;
+    private static final String SOW = "sow";
 
     public interface OchardAdapterInterface {
         void vegetablePressed(Vegetable vegetable);
@@ -38,7 +42,7 @@ public class OchardAdapter extends RecyclerView.Adapter<OchardAdapter.ViewHolder
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-       View view = mInflater.inflate(R.layout.view_vegetable_ochard, parent, false);
+        View view = mInflater.inflate(R.layout.view_vegetable_ochard, parent, false);
         return new ViewHolder(view);
     }
 
@@ -46,21 +50,22 @@ public class OchardAdapter extends RecyclerView.Adapter<OchardAdapter.ViewHolder
     @SuppressLint("NewApi")
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        holder.vegetableName.setBackground(ContextCompat.getDrawable(context, R.drawable.papa));
+        holder.vegetableName.setBackground(ContextCompat.getDrawable(context, VegetableUtil.getIcon(Integer.valueOf(data.get(position).getId()))));
         holder.vegetableContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ochardAdapterInterface.vegetablePressed(data.get(position));
             }
         });
+        holder.vSing.setVisibility(context.getSharedPreferences(SOW, MODE_PRIVATE).getBoolean(SOW, false) ? View.GONE : View.VISIBLE);
 
     }
 
-    public void setOchardAdapterInterface(OchardAdapterInterface ochardAdapterInterface){
+    public void setOchardAdapterInterface(OchardAdapterInterface ochardAdapterInterface) {
         this.ochardAdapterInterface = ochardAdapterInterface;
     }
 
-    public void setVegetables(List<Vegetable> vegetables){
+    public void setVegetables(List<Vegetable> vegetables) {
         data = vegetables;
         notifyDataSetChanged();
     }
@@ -70,7 +75,7 @@ public class OchardAdapter extends RecyclerView.Adapter<OchardAdapter.ViewHolder
         return data.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.im_vegetable_image)
         ImageView vegetableName;
@@ -78,11 +83,16 @@ public class OchardAdapter extends RecyclerView.Adapter<OchardAdapter.ViewHolder
         @BindView(R.id.ll_vegetable_container)
         LinearLayout vegetableContainer;
 
+        @BindView(R.id.iv_sing)
+        ImageView vSing;
+
         ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
 
         }
 
-    };
+    }
+
+    ;
 }

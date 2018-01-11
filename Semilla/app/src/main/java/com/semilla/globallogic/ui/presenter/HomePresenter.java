@@ -1,7 +1,7 @@
 package com.semilla.globallogic.ui.presenter;
 
 
-import android.arch.lifecycle.MutableLiveData;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
@@ -12,6 +12,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.semilla.globallogic.ui.fragment.HomeView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,9 +28,14 @@ public class HomePresenter {
     private Integer widthOchard;
     private Integer heigthOchard;
     private DatabaseReference mDatabase;
-    MutableLiveData<List<Vegetable>> list;
-    List<Vegetable> vegetables = new ArrayList<>();
 
+    List<Vegetable> vegetables = new ArrayList<>();
+    HomeView homeView;
+
+
+    public void  setHomeView(HomeView view){
+        this.homeView = view;
+    }
 
     public int getsquaresColum() {
 
@@ -61,11 +67,10 @@ public class HomePresenter {
 
     public List<Vegetable> getVegetables() {
 
-      //String[] vegetables = {"tomate", "zanahora", "lechuga"};
         List<Vegetable> vegetablesData = new ArrayList<>();
         for (int i = 0; i < vegetables.size(); i++) {
             for (int j = 0; j < (getsquaresColum() / vegetables.size()) * getsquaresFile(); j++) {
-                vegetablesData.add(new Vegetable(vegetables.get(i).getName()));
+                vegetablesData.add(vegetables.get(i));
             }
         }
         return vegetablesData;
@@ -74,19 +79,18 @@ public class HomePresenter {
 
     public void initialize(Context context) {
 
-        if(list == null){
-            list =new MutableLiveData<>();
-        }
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("vegetales");
-        mDatabase.addValueEventListener(new ValueEventListener() {
+
+        FirebaseDatabase.getInstance().getReference().child("vegetales").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-
+                vegetables.removeAll(vegetables);
                 for (DataSnapshot item : dataSnapshot.getChildren()) {
-                    //vegetables.add(item.getValue(Vegetable.class));
+                    vegetables.add(new Vegetable(item.getKey(), item.getValue().toString()));
                 }
+                homeView.setVegetables();
+
 
             }
 

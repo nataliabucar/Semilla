@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_vegetable_icon"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="29dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/vegetable_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_toRightOf="@+id/iv_vegetable_icon"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/verdigris"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/vegetable_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vegetable_name"
+        android:layout_toRightOf="@+id/iv_vegetable_icon"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/outer_space"
+        android:text="@string/how_item_description"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/v_select_vegetable"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="27dp"
+        android:background="@drawable/selector_circle"/>
+
+</RelativeLayout>

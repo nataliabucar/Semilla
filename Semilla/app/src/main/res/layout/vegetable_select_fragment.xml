@@ -15,19 +15,19 @@
         <View
             android:layout_width="32dp"
             android:layout_height="3dp"
-            android:background="@color/timerwolf"
-            android:layout_marginRight="4dp"/>
+            android:layout_marginRight="4dp"
+            android:background="@color/timerwolf" />
 
         <View
             android:layout_width="32dp"
             android:layout_height="3dp"
             android:layout_marginRight="4dp"
-            android:background="@color/timerwolf"/>
+            android:background="@color/timerwolf" />
 
         <View
             android:layout_width="32dp"
             android:layout_height="3dp"
-            android:background="@color/verdigris"/>
+            android:background="@color/verdigris" />
 
     </LinearLayout>
 
@@ -69,11 +69,7 @@
         android:id="@+id/recycler_vegetables"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_vegetables_descrition"/>
-
-
-
-
+        android:layout_below="@+id/tv_vegetables_descrition" />
 
 
     <LinearLayout
@@ -86,12 +82,12 @@
         <TextView
             android:id="@+id/tv_cancel"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/cancel"
             android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
             android:gravity="center"
+            android:text="@string/cancel"
             android:textColor="@color/outer_space"
             android:textSize="14sp" />
 
@@ -104,14 +100,14 @@
         <TextView
             android:id="@+id/tv_next"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_weight="1"
             android:fontFamily="sans-serif-medium"
+            android:gravity="center"
             android:text="@string/next"
             android:textColor="@color/outer_space"
-            android:textSize="14sp"/>
+            android:textSize="14sp" />
 
 
     </LinearLayout>

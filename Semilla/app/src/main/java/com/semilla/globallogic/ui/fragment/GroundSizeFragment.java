@@ -55,6 +55,7 @@ public class GroundSizeFragment extends BaseFragment {
     public void onClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_next:
+                if(!vWidthSize.getText().toString().equals("") || !vHeightSize.getText().toString().equals(""))
                 presenter.saveWidthAndHeight(getContext(), Integer.valueOf(vWidthSize.getText().toString()), Integer.valueOf(vHeightSize.getText().toString()));
                 ((WizardActivity)getActivity()).setNextFragment(VegetableSelectFragment.newInstance());
                 break;

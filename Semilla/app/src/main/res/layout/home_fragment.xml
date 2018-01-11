@@ -3,17 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginEnd="10dp"
-    android:layout_marginStart="10dp">
+    android:layout_marginStart="10dp"
+    android:background="@color/white">
+
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textSize="21sp"
-        android:textColor="@color/outer_space"
         android:fontFamily="sans-serif-light"
-        android:text="@string/welcome"/>
+        android:text="@string/welcome"
+        android:textColor="@color/outer_space"
+        android:textSize="21sp" />
 
     <TextView
         android:id="@+id/tv_message_welcome"
@@ -22,41 +24,39 @@
         android:layout_below="@+id/tv_title"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
-        android:textSize="16sp"
-        android:textColor="@color/outer_space"
         android:fontFamily="sans-serif"
-        android:text="@string/message_welcome"/>
+        android:text="@string/message_welcome"
+        android:textColor="@color/outer_space"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/tv_mts_width"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_message_welcome"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginTop="10dp"
-        android:textSize="10sp"
-        android:textColor="@color/outer_space"
         android:fontFamily="sans-serif"
-        android:text="@string/mts"/>
+        android:text="@string/mts"
+        android:textColor="@color/outer_space"
+        android:textSize="10sp" />
 
     <android.support.v7.widget.RecyclerView
-        android:layout_below="@+id/tv_mts_width"
         android:id="@+id/ll_container_orchard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"/>
+        android:layout_below="@+id/tv_mts_width"
+        android:layout_marginBottom="5dp" />
 
     <TextView
         android:id="@+id/tv_mts_height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ll_container_orchard"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:textSize="10sp"
-        android:textColor="@color/outer_space"
         android:fontFamily="sans-serif"
-        android:text="@string/mts"/>
+        android:text="@string/mts"
+        android:textColor="@color/outer_space"
+        android:textSize="10sp" />
 
 
     <TextView
@@ -64,12 +64,53 @@
         android:layout_width="156dp"
         android:layout_height="36dp"
         android:layout_below="@+id/tv_mts_height"
-        android:text="@string/edit"
-        android:gravity="center"
         android:layout_marginTop="17dp"
-        android:textSize="14sp"
         android:background="@drawable/shape_edit_ochard"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="@string/edit"
         android:textColor="@color/white"
-        android:fontFamily="sans-serif-medium"/>
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_below="@+id/tv_edit_ochard"
+        android:id="@+id/tv_title_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/calendar"
+        android:textColor="@color/outer_space"
+        android:textSize="21sp" />
+
+    <TextView
+        android:layout_below="@+id/tv_title_calendar"
+        android:id="@+id/tv_title_calendar_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/outer_space"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_below="@+id/tv_title_calendar_month"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calendario" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </RelativeLayout>

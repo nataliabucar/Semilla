@@ -141,7 +141,8 @@
                 <include
                     android:id="@+id/ll_seed_view"
                     layout="@layout/seed_view"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
