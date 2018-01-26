@@ -1,22 +1,41 @@
 package com.semilla.globallogic.ui.activity;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.location.Location;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ImageView;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.semilla.globallogic.R;
 import com.semilla.globallogic.ui.fragment.ChartFragment;
+import com.semilla.globallogic.ui.fragment.GroundFragment;
 import com.semilla.globallogic.ui.fragment.HomeFragment;
 import com.semilla.globallogic.ui.fragment.SocialFragment;
+import com.semilla.globallogic.ui.fragment.TutorialsFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     @BindView(R.id.iv_ochard_tab)
     ImageView vOchardTab;
@@ -27,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.iv_data_tab)
     ImageView vDataTab;
 
+    private GoogleMap mMap;
+
+    private GoogleApiClient apiClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+
         init();
     }
 
@@ -77,5 +100,35 @@ public class MainActivity extends AppCompatActivity {
         vCommunityTab.setSelected(false);
         vDataTab.setSelected(true);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case R.id.action_start:
+                return true;
+            case R.id.action_seed:
+                return true;
+            case R.id.action_tutorials:
+                replaceFragment(R.id.main_fragment_container, TutorialsFragment.newInstance());
+                return true;
+            case R.id.action_edit:
+                startActivity(WizardActivity.getIntent(this, true));
+                return true;
+            case R.id.action_recipes:
+                return true;
+            case R.id.action_login:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
 }

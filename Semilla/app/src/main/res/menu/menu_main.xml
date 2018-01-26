@@ -3,8 +3,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.semilla.globallogic.ui.activity.activity.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_start"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/c_mo_empiezo"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_seed"
+        android:orderInCategory="100"
+        android:title="@string/qu_sembrar"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_tutorials"
+        android:orderInCategory="100"
+        android:title="@string/tutoriales"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_edit"
+        android:orderInCategory="100"
+        android:title="Editar huerta"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_recipes"
+        android:orderInCategory="100"
+        android:title="@string/recetas"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_login"
+        android:orderInCategory="100"
+        android:title="@string/login"
         app:showAsAction="never" />
 </menu>
