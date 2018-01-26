@@ -37,10 +37,10 @@ public class WizardActivity  extends AppCompatActivity {
     }
 
     private void init() {
-        boolean isFirstRun = SharedPrefsUtil.loadPreferenceAsBoolean(SharedPrefsUtil.FIRST_RUN_KEY, false, WizardActivity.this);
+        boolean isFirstRun = SharedPrefsUtil.loadPreferenceAsBoolean(SharedPrefsUtil.FIRST_RUN_KEY, true, WizardActivity.this);
         if (isFirstRun || mIsFromMenu) {
             replaceFragment(R.id.main_fragment_container, GroundFragment.newInstance());
-            SharedPrefsUtil.savePreference(SharedPrefsUtil.FIRST_RUN_KEY, true, WizardActivity.this);
+            SharedPrefsUtil.savePreference(SharedPrefsUtil.FIRST_RUN_KEY, false, WizardActivity.this);
 
         } else {
             replaceFragment(R.id.main_fragment_container, GroundSizeFragment.newInstance());

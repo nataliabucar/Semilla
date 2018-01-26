@@ -15,10 +15,13 @@ import android.view.View;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
 import com.semilla.globallogic.R;
 import com.semilla.globallogic.ui.activity.WizardActivity;
 
@@ -50,6 +53,9 @@ public class GroundFragment extends BaseFragment implements OnMapReadyCallback,
         super.onViewCreated(view, savedInstanceState);
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
+
 
         apiClient = new GoogleApiClient.Builder(getContext())
                 .enableAutoManage(getActivity(), this)
@@ -132,13 +138,27 @@ public class GroundFragment extends BaseFragment implements OnMapReadyCallback,
 
     private void updateUI(Location loc) {
         if (loc != null) {
-            /*lblLatitud.setText("Latitud: " + String.valueOf(loc.getLatitude()));
-            lblLongitud.setText("Longitud: " + String.valueOf(loc.getLongitude()));*/
+            CameraUpdate center=
+                    CameraUpdateFactory.newLatLng(new LatLng(loc.getLatitude(),
+                            loc.getLongitude()));
+            CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
+
+            mMap.moveCamera(center);
+            mMap.animateCamera(zoom);
         }
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+
+        CameraUpdate center=
+                CameraUpdateFactory.newLatLng(new LatLng(-34.928846,
+                        -57.932563));
+        CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
+
+        mMap.moveCamera(center);
+        mMap.animateCamera(zoom);
+
     }
 }
