@@ -88,10 +88,11 @@
 
         <ImageView
             android:id="@+id/iv_item_0"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:background="@drawable/evolucion" />
+            android:src="@drawable/evolucion"
+            android:scaleType="centerInside" />
 
     </RelativeLayout>
 
@@ -135,10 +136,10 @@
 
         <ImageView
             android:id="@+id/iv_item_1"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:background="@drawable/evolucion_02" />
+            android:src="@drawable/evolucion_02" />
 
     </RelativeLayout>
 
@@ -182,10 +183,10 @@
 
         <ImageView
             android:id="@+id/iv_item_2"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:background="@drawable/evolucion_3" />
+            android:src="@drawable/evolucion_3" />
 
     </RelativeLayout>
 
@@ -229,10 +230,10 @@
 
         <ImageView
             android:id="@+id/iv_item_3"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:background="@drawable/evolucion_04" />
+            android:src="@drawable/evolucion_04" />
 
     </RelativeLayout>
 
@@ -276,10 +277,10 @@
 
         <ImageView
             android:id="@+id/iv_item_4"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:background="@drawable/evolucion_05" />
+            android:src="@drawable/evolucion_05" />
 
     </RelativeLayout>
 
@@ -328,10 +329,10 @@
 
         <ImageView
             android:id="@+id/iv_item_5"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:background="@drawable/evolucion_06" />
+            android:src="@drawable/evolucion_06" />
 
     </RelativeLayout>
 

@@ -55,4 +55,13 @@
     <string name="food">Alimento</string>
     <string name="production">Producción</string>
     <string name="calendar">Calendario</string>
+    <string name="a_n_no_cree_mi_huerta">Aún no cree Mi Huerta</string>
+    <string name="ingresar_como_invitado">Ingresar como invitado</string>
+    <string name="ya_tengo_mi_huerta">Ya tengo Mi Huerta</string>
+    <string name="ingresar_como_usuario">Ingresar como usuario</string>
+    <string name="c_mo_empiezo">Cómo empiezo?</string>
+    <string name="login">Ingresar</string>
+    <string name="recetas">Recetas</string>
+    <string name="tutoriales">Tutoriales</string>
+    <string name="qu_sembrar">Qué sembrar</string>
 </resources>

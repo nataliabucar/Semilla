@@ -3,7 +3,6 @@ package com.semilla.globallogic.ui.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -15,10 +14,10 @@ import com.semilla.globallogic.ui.activity.VegetableDetailActivity;
 import com.semilla.globallogic.ui.activity.WizardActivity;
 import com.semilla.globallogic.ui.adapter.OchardAdapter;
 import com.semilla.globallogic.ui.presenter.HomePresenter;
+import com.semilla.globallogic.ui.util.SharedPrefsUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -64,17 +63,17 @@ public class HomeFragment extends BaseFragment implements OchardAdapter.OchardAd
     }
 
     @Override
-    public void onResume(){
+    public void onResume() {
         super.onResume();
-        if(homePresenter != null){
-           drawOchard();
+        if (homePresenter != null) {
+            drawOchard();
         }
     }
 
 
     private void init() {
-        vMonth.setText( new SimpleDateFormat("MMM").format(Calendar.getInstance().getTime()));
-        vTtitle.setText(!homePresenter.isFirstTime(getContext())? getResources().getString(R.string.basic_ochard): getResources().getString(R.string.welcome));
+        vMonth.setText(new SimpleDateFormat("MMM").format(Calendar.getInstance().getTime()));
+        vTtitle.setText(!homePresenter.isFirstTime(getContext()) ? getResources().getString(R.string.basic_ochard) : getResources().getString(R.string.welcome));
         vMtsHeight.setText(String.format(getString(R.string.mts), homePresenter.getHeight(getContext())));
         vMtsWidht.setText(String.format(getString(R.string.mts), homePresenter.getWidth(getContext())));
         vOrchardRecycler.setLayoutManager(new GridLayoutManager(this.getContext(), homePresenter.getsquaresColum()));
@@ -91,8 +90,7 @@ public class HomeFragment extends BaseFragment implements OchardAdapter.OchardAd
 
     @OnClick({R.id.tv_edit_ochard})
     public void onClicked(View view) {
-
-        getActivity().startActivity(WizardActivity.getIntent(getActivity()));
+        getActivity().startActivity(WizardActivity.getIntent(getActivity(), false));
     }
 
 
@@ -101,7 +99,7 @@ public class HomeFragment extends BaseFragment implements OchardAdapter.OchardAd
         getActivity().startActivity(VegetableDetailActivity.getIntent(getActivity()));
     }
 
-    private void drawOchard(){
+    private void drawOchard() {
         vMtsHeight.setText(String.format(getString(R.string.mts), homePresenter.getHeight(getContext())));
         vMtsWidht.setText(String.format(getString(R.string.mts), homePresenter.getWidth(getContext())));
         ochardAdaper.setVegetables(homePresenter.getVegetables());

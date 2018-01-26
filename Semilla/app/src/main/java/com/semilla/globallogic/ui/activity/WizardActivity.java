@@ -10,12 +10,16 @@ import android.support.v7.widget.Toolbar;
 
 import com.semilla.globallogic.R;
 import com.semilla.globallogic.ui.fragment.GroundFragment;
+import com.semilla.globallogic.ui.fragment.GroundSizeFragment;
+import com.semilla.globallogic.ui.util.SharedPrefsUtil;
 
 import butterknife.ButterKnife;
 
 
 
 public class WizardActivity  extends AppCompatActivity {
+
+    private static boolean mIsFromMenu = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +31,20 @@ public class WizardActivity  extends AppCompatActivity {
         init();
     }
 
-    public static Intent getIntent(Context context){
+    public static Intent getIntent(Context context, boolean isFromMenu){
+        mIsFromMenu = isFromMenu;
         return  new Intent(context, WizardActivity.class);
     }
 
     private void init() {
+        boolean isFirstRun = SharedPrefsUtil.loadPreferenceAsBoolean(SharedPrefsUtil.FIRST_RUN_KEY, false, WizardActivity.this);
+        if (isFirstRun || mIsFromMenu) {
+            replaceFragment(R.id.main_fragment_container, GroundFragment.newInstance());
+            SharedPrefsUtil.savePreference(SharedPrefsUtil.FIRST_RUN_KEY, true, WizardActivity.this);
 
-        replaceFragment(R.id.main_fragment_container, GroundFragment.newInstance());
+        } else {
+            replaceFragment(R.id.main_fragment_container, GroundSizeFragment.newInstance());
+        }
 
 
     }
