@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.globallogic.model.Vegetable;
 import com.semilla.globallogic.R;
@@ -34,7 +35,9 @@ public class GroundSizeFragment extends BaseFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-         presenter = new GroundSizePresenter();
+        presenter = new GroundSizePresenter();
+        vWidthSize.setText(String.valueOf(presenter.getHeight(this.getContext())));
+        vHeightSize.setText(String.valueOf(presenter.getWidth(this.getContext())));
 
     }
 
@@ -43,7 +46,6 @@ public class GroundSizeFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
     }
-
 
 
     @Override
@@ -55,9 +57,14 @@ public class GroundSizeFragment extends BaseFragment {
     public void onClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_next:
-                if(!vWidthSize.getText().toString().equals("") || !vHeightSize.getText().toString().equals(""))
-                presenter.saveWidthAndHeight(getContext(), Integer.valueOf(vWidthSize.getText().toString()), Integer.valueOf(vHeightSize.getText().toString()));
-                ((WizardActivity)getActivity()).setNextFragment(VegetableSelectFragment.newInstance());
+                if (!vWidthSize.getText().toString().equals("") || !vHeightSize.getText().toString().equals("")) {
+                    if( Integer.valueOf(vWidthSize.getText().toString()) >= presenter.getHeight(this.getContext()) && Integer.valueOf(vHeightSize.getText().toString()) >= presenter.getWidth(this.getContext())){
+                        presenter.saveWidthAndHeight(getContext(), Integer.valueOf(vWidthSize.getText().toString()), Integer.valueOf(vHeightSize.getText().toString()));
+                        ((WizardActivity) getActivity()).setNextFragment(VegetableSelectFragment.newInstance());
+                    }else{
+                        Toast.makeText(this.getContext(), "El tamaño minimo de la huerta es de 4 x 2 mts", Toast.LENGTH_SHORT).show();
+                    }
+                }
                 break;
             case R.id.tv_cancel:
                 getActivity().finish();
