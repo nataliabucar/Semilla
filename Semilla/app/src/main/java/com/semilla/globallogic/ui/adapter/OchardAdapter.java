@@ -57,7 +57,7 @@ public class OchardAdapter extends RecyclerView.Adapter<OchardAdapter.ViewHolder
                 ochardAdapterInterface.vegetablePressed(data.get(position));
             }
         });
-        holder.vSing.setVisibility(context.getSharedPreferences(SOW, MODE_PRIVATE).getBoolean(SOW, false) ? View.GONE : View.VISIBLE);
+        holder.vSing.setVisibility(context.getSharedPreferences(SOW, MODE_PRIVATE).getBoolean(SOW, false) ? View.GONE : View.INVISIBLE);
 
     }
 

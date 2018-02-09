@@ -96,7 +96,7 @@ public class HomeFragment extends BaseFragment implements OchardAdapter.OchardAd
 
     @Override
     public void vegetablePressed(Vegetable vegetable) {
-        getActivity().startActivity(VegetableDetailActivity.getIntent(getActivity()));
+        getActivity().startActivity(VegetableDetailActivity.getIntent(getActivity(), vegetable.getName()));
     }
 
     private void drawOchard() {

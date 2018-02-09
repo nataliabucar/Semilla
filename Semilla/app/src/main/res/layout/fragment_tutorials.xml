@@ -1,15 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/tutorials" />
+   <android.support.v7.widget.Toolbar
+       android:id="@+id/my_toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:background="@color/white"
+       android:elevation="4dp"
+       android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+       app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-</RelativeLayout>
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="22dp"
+       android:layout_marginLeft="10dp"
+       android:textSize="21sp"
+       android:textColor="@color/outer_space"
+       android:fontFamily="sans-serif-light"
+       android:text="@string/work_plan"/>
+   <View
+       android:layout_width="328dp"
+       android:layout_height="1dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+       android:background="@color/manatee"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="22dp"
+       android:layout_marginLeft="10dp"
+       android:textSize="16sp"
+       android:textColor="@color/outer_space"
+       android:fontFamily="sans-serif"
+       android:text="Marcar el terreno"/>
+
+   <View
+       android:layout_width="328dp"
+       android:layout_height="1dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+       android:background="@color/manatee"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="22dp"
+       android:layout_marginLeft="10dp"
+       android:textSize="16sp"
+       android:textColor="@color/outer_space"
+       android:fontFamily="sans-serif"
+       android:text="Siembra de primavera"/>
+
+   <View
+       android:layout_width="328dp"
+       android:layout_height="1dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+       android:background="@color/manatee"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="22dp"
+       android:layout_marginLeft="10dp"
+       android:textSize="16sp"
+       android:textColor="@color/outer_space"
+       android:fontFamily="sans-serif"
+       android:text="Aporcar"/>
+
+   <View
+       android:layout_width="328dp"
+       android:layout_height="1dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+       android:background="@color/manatee"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="22dp"
+       android:layout_marginLeft="10dp"
+       android:textSize="16sp"
+       android:textColor="@color/outer_space"
+       android:fontFamily="sans-serif"
+       android:text="Cosecha de verano"/>
+
+   <View
+       android:layout_width="328dp"
+       android:layout_height="1dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+       android:background="@color/manatee"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="22dp"
+       android:layout_marginLeft="10dp"
+       android:textSize="16sp"
+       android:textColor="@color/outer_space"
+       android:fontFamily="sans-serif"
+       android:text="Preparar la tierra"/>
+
+   <View
+       android:layout_width="328dp"
+       android:layout_height="1dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+       android:background="@color/manatee"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="22dp"
+       android:layout_marginLeft="10dp"
+       android:textSize="16sp"
+       android:textColor="@color/outer_space"
+       android:fontFamily="sans-serif"
+       android:text="Siembra de otoño"/>
+   <View
+       android:layout_width="328dp"
+       android:layout_height="1dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+       android:background="@color/manatee"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="22dp"
+       android:layout_marginLeft="10dp"
+       android:textSize="16sp"
+       android:textColor="@color/outer_space"
+       android:fontFamily="sans-serif"
+       android:text="Cosecha de invierno"/>
+
+   <View
+       android:layout_width="328dp"
+       android:layout_height="1dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+       android:background="@color/manatee"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="22dp"
+       android:layout_marginLeft="10dp"
+       android:textSize="16sp"
+       android:textColor="@color/outer_space"
+       android:fontFamily="sans-serif"
+       android:text="Rotacion y asociacion de plantas"/>
+
+
+</LinearLayout>

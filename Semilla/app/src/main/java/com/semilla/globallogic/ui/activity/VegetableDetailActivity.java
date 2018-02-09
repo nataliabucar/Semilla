@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.semilla.globallogic.R;
 import com.semilla.globallogic.ui.presenter.VegetableDetailPresenter;
@@ -42,16 +43,29 @@ public class VegetableDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vegetable_detail);
         ButterKnife.bind(this);
+        String vegetable = getIntent().getStringExtra("VEGETABLE_NAME");
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        myToolbar.setTitle(vegetable);
         setSupportActionBar(myToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         presenter = new VegetableDetailPresenter();
         vCheckSow.setChecked(presenter.isSow(this));
 
 
     }
 
-    public static Intent getIntent(Context context) {
-        return new Intent(context, VegetableDetailActivity.class);
+    public static Intent getIntent(Context context, String vegetableName) {
+        Intent intent = new Intent(context, VegetableDetailActivity.class);
+        intent.putExtra("VEGETABLE_NAME", vegetableName);
+        return intent;
     }
 
 
